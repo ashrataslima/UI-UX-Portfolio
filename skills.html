@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="homeStyle.css">
+    <title>Ashra Taslima</title>
+    <style>
+        .content1 {
+            position: relative;
+            height: calc(100vh - 60px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        h1 {
+            margin: 20px 0;
+            font-size: 36px;
+        }
+        .skills-chart {
+            position: relative;
+            width: 80%;
+            max-width: 800px;
+            height: 400px;
+        }
+        .chart-lines {
+            position: absolute;
+            top: 0;
+            left: 100px;
+            right: 0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background-color: #E4E0E2;
+        }
+        .chart-line {
+            border-top: 1px dashed #e0a0a0;
+            position: relative;
+            height: 0;
+        }
+        .chart-label {
+            position: absolute;
+            left: -150px;
+            top: -10px;
+            font-size: 14px;
+            align-items: center;
+        }
+        .chart-label span {
+            width: 10px;
+            height: 10px;
+            margin-right: 5px;
+            padding-left: 5px;
+        }
+        .chart-label.purple span { background: #e0a0ff; }
+        .chart-label.green span { background: #a0ffa0; }
+        .chart-label.yellow span { background: #ffffa0;
+        height: 20px;
+    width: 5px; }
+        .chart-label.orange span { background: #ffa0a0; }
+        .chart-bars {
+            position: absolute;
+            bottom: 0;
+            left: 100px;
+            right: 0;
+            height: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-end;
+        }
+        .bar {
+            width: 50px;
+            background: #d0d0ff;
+            position: relative;
+            animation: grow 1s ease-out forwards;
+            transform-origin: bottom;
+        }
+        @keyframes grow {
+            from {
+                height: 0;
+            }
+            to {
+                height: var(--bar-height);
+            }
+        }
+        .bar:nth-child(1) { --bar-height: 60%; animation-delay: 0s; }
+        .bar:nth-child(2) { --bar-height: 40%; animation-delay: 0.2s; }
+        .bar:nth-child(3) { --bar-height: 80%; animation-delay: 0.4s; }
+        .bar:nth-child(4) { --bar-height: 50%; animation-delay: 0.6s; }
+        .bar:nth-child(5) { --bar-height: 70%; animation-delay: 0.8s; }
+        .bar:nth-child(6) { --bar-height: 70%; animation-delay: 1.0s; }
+        .bar:nth-child(7) { --bar-height: 70%; animation-delay: 1.2s; }
+        .bar:nth-child(8) { --bar-height: 70%; animation-delay: 1.4s; }
+        .bar:nth-child(9) { --bar-height: 70%; animation-delay: 1.6s; }
+        .bar:nth-child(10) { --bar-height: 70%; animation-delay: 1.8s; }
+        .bar-label {
+            position: absolute;
+            bottom: -60px;
+            transform: translateX(-50%) rotate(-45deg);
+            font-size: 14px;
+            white-space: nowrap;
+        }
+        @media (max-width: 768px) {
+            
+            .skills-chart {
+                width: 100%;
+            }
+            .chart-bars {
+                left: 80px;
+            }
+            .chart-label {
+                left: -80px;
+                font-size: 12px;
+            }
+            .bar {
+                width: 30px;
+            }
+            .bar-label {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="Logo.svg" alt="Ashra Taslima"width="80%" height="auto"></a>
+        </div>
+        <div class="menu-toggle"><span></span><span></span><span></span></div>
+        <nav>
+            <a href="projects.html">Projects</a>
+            <a href="skills.html">Skills</a>
+            <a href="about.html">About</a>
+            <a href="UI-UX Designer.pdf" download="AshraTaslimaResume"">Resume</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    
+    <div class="content1">
+        <h1>My Skills</h1>
+        <div class="skills-chart">
+            <div class="chart-lines">
+                <div class="chart-line">
+                    <div class="chart-label purple" style="border-left: 5px solid #e0a0ff; padding-left: 5px;">I'm the <strong> master</strong><br>
+                    <strong>of the universe</strong></div>
+                </div>
+                <div class="chart-line">
+                    <div class="chart-label green" style="border-left: 5px solid #8EBD7B; padding-left:10px;"><strong>High,</strong> <br>I'm pretty good</div>
+                </div>
+                <div class="chart-line">
+                    <div class="chart-label yellow" style="border-left: 5px solid #BECA7D; padding-left:10px;"><strong>Medium,</strong> I'm trying <br> to improve</div>
+                </div>
+                <div class="chart-line">
+                    <div class="chart-label orange" style="border-left: 5px solid #F4B800; padding-left:10px;"><strong>Basic,</strong> you can't <br> always win</div>
+                </div>
+                <div class="chart-line">
+                    <div class="chart-label orange" style="border-left: 5px solid #F44B00; padding-left:10px;"><strong>Uh?</strong> <br>Next question?</div>
+                </div>
+            </div>
+            <div class="chart-bars">
+                <div class="bar">
+                    <div class="bar-label">User Research</div>
+                </div>
+                <div class="bar">
+                    <div class="bar-label">Wire Framing</div>
+                </div>
+                <div class="bar">
+                    <div class="bar-label">Visual Design</div>
+                </div>
+                <div class="bar">
+                    <div class="bar-label">Interaction Design</div>
+                </div>
+                <div class="bar">
+                    <div class="bar-label">Accessibility</div>
+                </div>
+                <div class="bar">
+                    <div class="bar-label">Responsive Design</div>
+                </div>
+                <div class="bar">
+                    <div class="bar-label">Info Architecture</div>
+                </div>
+                <div class="bar">
+                    <div class="bar-label">Collaboration</div>
+                </div>
+                <div class="bar">
+                    <div class="bar-label">Design Systems</div>
+                </div>
+                <div class="bar">
+                    <div class="bar-label">Data-Driven Design</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('nav');
+        if (menuToggle && nav) {
+            menuToggle.addEventListener('click', () => {
+                nav.classList.toggle('active');
+            });
+        } else {
+            console.log('Elements not found');
+        }
+    </script>
+</body>
+</html>
+

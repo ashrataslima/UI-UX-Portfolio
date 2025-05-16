@@ -1,0 +1,109 @@
+body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            overflow: hidden;
+            background-color: #E4E0E2;
+        }
+        .homeText {
+            font-size: 6rem;
+            background: -webkit-linear-gradient(#1C2A97, #E13E96, #6548A9);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin: 0px;
+            font-weight: bolder;
+            line-height: 6rem;
+        }
+        header {
+            background-color: #1a1a1a;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 20px;
+            align-items: center;
+            height: 60px;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        nav {
+            display: flex;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 16px;
+        }
+        .menu-toggle {
+            display: none;
+            width: 30px;
+            height: 20px;
+            cursor: pointer;
+            position: relative;
+        }
+        .menu-toggle span {
+            position: absolute;
+            height: 3px;
+            width: 100%;
+            background: white;
+            display: block;
+            transition: all 0.3s ease;
+        }
+        .menu-toggle span:nth-child(1) { top: 0; }
+        .menu-toggle span:nth-child(2) { top: 50%; transform: translateY(-50%); }
+        .menu-toggle span:nth-child(3) { bottom: 0; }
+        .content {
+            position: relative;
+            height: calc(100vh - 60px);
+            background: #E4E0E2;
+            overflow: hidden;
+        }
+        .content::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-bottom: 400px solid #0B080A;
+            border-right: 325vh solid transparent;
+        }
+        .image-placeholder {
+            
+            width: 40vw;
+            height:auto;
+            bottom: 0;
+            right: 0;
+            position: fixed;
+            object-fit: cover; /* Ensures the image fills the container */
+            z-index: 10;
+        }
+        .textContener{
+            z-index: 3;
+            margin-left: 10vw;
+            margin-top: 5vw;
+        }
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+            nav {
+                display: none;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background-color: #1a1a1a;
+                flex-direction: column;
+                padding: 10px 0;
+                z-index: 1;
+            }
+            nav.active {
+                display: flex;
+            }
+            nav a {
+                margin: 10px 20px;
+            }
+        }

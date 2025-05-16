@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="homeStyle.css">
+    <title>Ashra Taslima</title>
+
+    <style>
+        .content1 {
+            position: relative;
+            height: calc(100vh - 60px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            z-index: 1;
+        }
+        .about-container {
+            display: flex;
+            align-items: center;
+            max-width: 1200px;
+            width: 100%;
+        }
+        h1 {
+            margin: 0 0 10px 0;
+            font-size: 36px;
+            color: #333;
+        }
+        .about-text {
+            flex: 1;
+            padding: 20px;
+            color: #333;
+            
+        }
+        .about-text p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin: 0;
+            padding-right: 25px;
+        }
+        .about-text a {
+            color: #e0a0ff;
+            text-decoration: none;
+            border-bottom: 1px dashed #e0a0ff;
+        }
+        .about-image {
+            display: flex;
+            justify-content: center;
+            width: 450px;
+            height: 400px;
+            
+        }
+        /* Moving Clouds Animation at the Top */
+        .cloud {
+            position: absolute;
+            font-size: 80px; /* Increased from 30px */
+            z-index: 0;
+            top: 20px; /* Position near the top */
+            color: #fff; /* Light gray for a cloud-like appearance */
+            animation: floatAcross 15s linear infinite;
+        }
+        @keyframes floatAcross {
+            0% {
+                left: -100px;
+                opacity: 0.8;
+            }
+            20% {
+                opacity: 1;
+            }
+            80% {
+                opacity: 1;
+            }
+            100% {
+                left: 100%;
+                opacity: 0.8;
+            }
+        }
+        .cloud:nth-child(1) {
+            animation-delay: 0s;
+        }
+        .cloud:nth-child(2) {
+            top: 40px;
+            font-size: 80px; /* Increased from 35px */
+            animation-delay: 5s;
+        }
+        .cloud:nth-child(3) {
+            top: 30px;
+            font-size: 80px; /* Increased from 32px */
+            animation-delay: 10s;
+        }
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+            nav {
+                display: none;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background-color: #1a1a1a;
+                flex-direction: column;
+                padding: 10px 0;
+                z-index: 1;
+            }
+            nav.active {
+                display: flex;
+            }
+            nav a {
+                margin: 10px 20px;
+            }
+            .about-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            .about-image {
+                height: 300px;
+                margin-top: 20px;
+            }
+            .cloud {
+                font-size: 25px; /* Increased from 20px */
+                top: 10px;
+            }
+            .cloud:nth-child(2) {
+                top: 20px;
+                font-size: 30px; /* Increased from 25px */
+            }
+            .cloud:nth-child(3) {
+                top: 15px;
+                font-size: 27px; /* Increased from 22px */
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="Logo.svg" alt="Ashra Taslima"width="80%" height="auto"></a>
+        </div>
+        <div class="menu-toggle"><span></span><span></span><span></span></div>
+        <nav>
+            <a href="projects.html">Projects</a>
+            <a href="skills.html">Skills</a>
+            <a href="about.html">About</a>
+            <a href="UI-UX Designer.pdf" download="AshraTaslimaResume"">Resume</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <div class="content1">
+        <div class="cloud">☁</div>
+        <div class="cloud">☁</div>
+        <div class="cloud">☁</div>
+        <div class="about-container">
+            <div class="about-text">
+                <h1>About Me</h1>
+                <p><a href="mailto:aash-raa-taass-lim/">aash-raa-taass-lim/</a></p>
+                <p>
+                    I'm Ashra Taslima, a UI/UX designer and Full Stack Developer with a deep-rooted passion for art that fuels my creative approach
+                    to designing user-centered digital experiences. With over six years of experience, I blend my love for artistic expression— 
+                    inspired by the fluidity of watercolors and the vibrancy of visual storytelling—with technical expertise in tools like Figma, 
+                    Adobe XD, and React. Whether crafting intuitive wireframes or prototyping responsive interfaces, I draw on my artistic sensibility 
+                    to create visually compelling designs that resonate with users. My work at Find A Lawyer, where I boosted funding by 43% through
+                    user-focused design, and at Credit One Bank, where I enhanced efficiency by 85% with a custom CRM tool, reflects my commitment 
+                    to merging art and technology. For me, every pixel is a brushstroke, transforming ideas into impactful, accessible, and engaging digital canvases.
+                </p>
+            </div>
+            <div class="about-image">
+                <img src="about.jpg" alt="Me Painting">
+            </div>
+        </div>
+    </div>
+
+    
+    </div>
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('nav');
+        if (menuToggle && nav) {
+            menuToggle.addEventListener('click', () => {
+                nav.classList.toggle('active');
+            });
+        } else {
+            console.log('Elements not found');
+        }
+    </script>
+</body>
+</html>
+

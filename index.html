@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="homeStyle.css">
+    <title>Ashra Taslima</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="Logo.svg" alt="Ashra Taslima"width="80%" height="auto"></a>
+        </div>
+        <div class="menu-toggle"><span></span><span></span><span></span></div>
+        <nav>
+            <a href="projects.html">Projects</a>
+            <a href="skills.html">Skills</a>
+            <a href="about.html">About</a>
+            <a href="UI-UX Designer.pdf" download="AshraTaslimaResume">Resume</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <div class="content">
+        <div class="textContener">
+            <h3 style="margin-bottom: 0px;">Hi my name is Ashra </h3>
+            <h3 style="margin: 0px;"> I am a </h3>
+            <h1 class="homeText">UI UX </h1>
+            <h1 class="homeText">DESIGNER</h1>
+            <h3 style="margin: 0px;">Not a LOGO Designer:(</h3>
+            
+            
+        </div>
+
+            <img class="image-placeholder" src="HomePic.svg" alt="Picture Of Me" >
+        
+    </div>
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('nav');
+        if (menuToggle && nav) {
+            menuToggle.addEventListener('click', () => {
+                nav.classList.toggle('active');
+            });
+        } else {
+            console.log('Elements not found');
+        }
+    </script>
+</body>
+</html>
+
